@@ -18,4 +18,14 @@
   </li>
 </ul>
 
+<h2>Demo: NgZone</h2>
+
+<p>Progress: {{progress}}%</p>
+<p *ngIf="progress >= 100">Done processing {{label}} of Angular zone!</p>
+
+<button (click)="processWithinAngularZone()">Process within Angular zone</button>
+<button (click)="processOutsideOfAngularZone()">Process outside of Angular zone</button>
+<button (click)="clickMe()">Error</button>
+<div *ngFor="let new of outputData">{{new}}</div>
+
 <router-outlet></router-outlet>
